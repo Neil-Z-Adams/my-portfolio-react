@@ -1,0 +1,147 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+.hide {
+  display: none;
+}
+
+/* Header */
+.headerOpacity,
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  margin-right: 5%;
+  padding-left: 2%;
+  background: var(--bg-black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.menuIcon {
+  font-size: 2rem;
+  color: var(--text-yellow);
+  cursor: pointer;
+  display: none;
+}
+
+.headerOpacity img,
+.header img {
+  width: 55px;
+  height: 45px;
+  border-radius: 100%;
+  margin-left: 3%;
+}
+
+.headerOpacity {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px 0;
+  margin-right: 5%;
+  padding-left: 2%;
+  width: 100%;
+  background: var(--bg-black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0.7;
+}
+
+.navbar ul {
+  display: flex;
+  margin-right: 7%;
+}
+
+.navbar a {
+  font-size: 18px;
+  color: var(--text-white);
+  text-decoration: none;
+  font-weight: 500;
+  margin-right: 55px;
+  transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: var(--text-yellow);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .headerOpacity,
+  .header {
+    padding: 2rem 4%;
+  }
+}
+
+@media (max-width: 800px) {
+  .headerOpacity img,
+  .header img {
+    position: absolute;
+    top: 0;
+    margin-top: 12px;
+    left: 1%;
+    width: 50px;
+    height: 40px;
+  }
+
+  .navbar ul {
+    margin-right: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 1rem;
+    margin-top: 1.2rem;
+    width: 100%;
+  }
+
+  .menuIcon {
+    position: absolute;
+    display: block;
+    top: 1%;
+    font-size: 50px;
+    right: 11%;
+  }
+
+  .navbar {
+    transition: 0.25s ease;
+    transition-delay: 0.25s;
+    width: 100%;
+    margin-top: 10%;
+  }
+}
+
+@media (max-width: 480px) {
+  .menuIcon {
+    margin-left: 77%;
+  }
+}
+
+@media (max-width: 350px) {
+  .menuIcon {
+    margin-left: 74%;
+  }
+}
+
+@media (max-width: 280px) {
+  .menuIcon {
+    margin-left: 71%;
+  }
+}
